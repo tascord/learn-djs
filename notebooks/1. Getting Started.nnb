@@ -1,0 +1,78 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "<div align=\"center\" style=\"margin: 5rem 0 0;\">\r\n    <h1>Welcome to Part 1: Getting Started!</h1>\r\n    <br>\r\n    We're going to get you up and running with the basics of JavaScript and TypeScript hopefully very soon!\r\n</div>\r\n\r\n<div align=\"center\" style=\"height: 5rem; display: grid; place-items: center;\">\r\n    <hr style=\"width: 90vw;\"></hr>\r\n</div>\r\n\r\n<div align=\"center\">\r\n[ <a href=\"./2. Extended Data Types.nnb\">Next Lesson</a> ]\r\n</div>"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "## 1) What is JavaScript/TypeScript?\r\n\r\nJavaScript is a programming language that is used to make web pages interactive.\r\n\r\nIt also has a counterpart that can run code on your computer, called Node.js. (We'll be using this later!)\r\n\r\nJavaScript was made by Brendan Eich in 1995 in order to try and make web pages interactive back when that wasn't really a thing.  \r\nNowadays JavaScript is governed by the ECMAScript standard, which is a set of rules that define the language, and is used by millions both directly and indirectly.  \r\nIt's a super versatile tool and is a wonderful entry point for beginners, as well as being used in scale by the world's largest companies.  \r\n\r\nTypeScript is a version of JavaScript that is used to make code more readable and easier to work with.  \r\nIt's super useful to learn TypeScript early as it teaches you something called strong typing which is super useful for stopping hard to find errors."
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "<div align=\"center\" style=\"height: 7.5rem; display: grid; place-items: center;\">\r\n    <hr style=\"width: 30vw;\"></hr>\r\n</div>"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "## 2) Let's talk variables\r\n\r\nVariables are like boxes that you can put stuff in.\r\n\r\nOn the outside of the box there is a label that tells you general information about what is in the box.  \r\nThe box might say \"There's a number in here!\" or \"There's a string in here!\". The label refers to the type of data that is in the box, which is called a data type.  \r\nThere are a whole bunch of what are called Primitive data types, which are the most basic data types, we'll go over them in just a bit.  \r\n\r\nInside the box you can store anything that fits the data type.  \r\nThere are some boxes you can swap things in and out of, and there are some boxes that can only hold one thing, called constants.\r\n\r\nThe power of these boxes may seem small, but they are the foundation of all programming!!\r\n<br>\r\n\r\n><br>\r\n> NOTE:<br>\r\n> In JavaScript, as aposed to TypeScript, there are no data types, which means that you can't tell what is in the box.<br>\r\n> This can make it hard to find the meaning of your boxes without digging through lots of code.<br>\r\n> It also leaves room for the wrong type of data being put in the box if not careful. In other languages you are forced to use data types, which is why it's important to learn early on.<br>\r\n><br>\r\n\r\n### Lets show you what variables look like in TypeScript\r\n\r\n```typescript\r\nlet name: string = \"John\";\r\n```\r\n\r\nBreaking down the above code:\r\n\r\n| Keyword  | Description                                                                                                                                                                |\r\n|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\r\n| `let`    | This is a keyword that tells the computer that this is a variable.                                                                                                         |\r\n| `name`   | This is the name of the variable.                                                                                                                                          |\r\n| `:`      | This is a colon, which tells the computer that what's before it is a variable, and what's after is it's type.                                                              |\r\n| `string` | This is the type of data that is in the variable (our boxes label).                                                                                                        |\r\n| `=`      | This is a symbol that tells the computer that what's after it is the value that the variable will hold (inside of the box).                                                |\r\n| `\"John\"` | This is the value that the variable will hold. In TypeScript string's are surrounded by either single quotes, double quotes or backticks (we'll delve into this later).    |\r\n| `;`      | This is a semi-colon, which tells TypeScript that the instruction is complete and that we can move on to the next one. They aren't needed, but it's good practice to have. |\r\n\r\n\r\nFor non-constant variables (`let` as opposed to `const`), you can redeclare variables by omitting some keywords:\r\n```typescript\r\nname = \"Steve\";\r\n```\r\n\r\nHere we're omitting `let` (the variable keyword), `:` (the colon), and `string` (the data type).  \r\nAnd now `name` is a variable, still holding a string, but with a new value: 'Steve';\r\n\r\n\r\n><br>\r\n> NOTE:<br>\r\n> Some legacy (and poorly written code) will use the var keyword rather then let or const.google colab\r\n> <br>\r\n> This can create a lot of issues due to something called hoisting (further reading here: https://www.w3schools.com/js/js_hoisting.asp).<br>\r\n> While their may be specific instances where you need to use it, nothing in these lessons will require it!<br>\r\n><br>"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "<div align=\"center\" style=\"height: 7.5rem; display: grid; place-items: center;\">\r\n    <hr style=\"width: 30vw;\"></hr>\r\n</div>"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# 3) Playground\r\nWe're now going to use a 'Playground' in order to test what we've learned.  \r\nGo ahead and play with the following code to see if you understand how to apply your knowledge of data types.  \r\nIf you get stuck, have a look at the [Hints](#hints) section.  \r\n\r\n**Good Luck!**"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// Comments are bit's of code that aren't treated as instructions.\r\n// They're super useful for letting people know what's happening in your code.\r\n// Comments can be written by putting two slashes before your line like this!\r\n\r\n// Strings are used to represent text.\r\nlet pet: string = 'Dog';\r\n\r\n// Numbers store numbers.\r\nconst age: number = 5;\r\n\r\n// Booleans store true or false values.\r\nlet is_hungry: boolean = true;\r\nis_hungry = false;\r\n\r\n// Don't worry about this, we'll cover it later.\r\n// It's here so you can see the output of the Playground.\r\nconsole.log(`\r\n    Output: \r\n    Pet: ${pet}\r\n    Age: ${age}\r\n    Hungry?: ${is_hungry}\r\n`);\r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                "    Output: ",
+                                "    Pet: Dog",
+                                "    Age: 5",
+                                "    Hungry?: false",
+                                "",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# Hints\r\n\r\nIf the output of your code is blank or is only listing some of the data, have a look for any red squiggly lines in your code.  \r\nThis is what TypeScript is telling you to fix.  \r\nOnce you've isolated the issue have a look at the following table!\r\n\r\n| Issue                                     | Problem                                                                                                                | Solution                                                                                                                                          |\r\n|-------------------------------------------|------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|\r\n| `Type 'x' is not assignable to type 'y'.` | One of your variables is described as being a type that it's value doesn't represent. E.g. `let age: number = 'five';` rather than `let age: number = 5;` | Make sure all your data types match up with the values you assign your variables. Make sure you aren't putting quotes around numbers or booleans. |\r\n\r\nIf another issue has come up, make sure you haven't modified the default code.  \r\nIf everything looks good, try restarting Visual Studio Code or running the Update.bat file."
+            ],
+            "outputs": []
+        }
+    ]
+}

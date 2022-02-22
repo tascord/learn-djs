@@ -1,0 +1,115 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "<div align=\"center\" style=\"margin: 5rem 0 0;\">\r\n    <h1>Welcome to Part 3: Functions!</h1>\r\n    <br>\r\n    Bigger things are coming!\r\n</div>\r\n\r\n<div align=\"center\" style=\"height: 5rem; display: grid; place-items: center;\">\r\n    <hr style=\"width: 90vw;\"></hr>\r\n</div>\r\n\r\n<div align=\"center\">\r\n[ <a href=\"./2. Extended Data Types.nnb\">Last Lesson</a> | <a href=\"./1. Getting Started.nnb\">Next Lesson</a> ]\r\n</div>"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# Lots more ways to store data\r\n\r\nWhile strings, numbers and booleans are all really useful, it gets diffult managing lots of them at once.\r\n\r\nImagine that you need to keep track of a pet.  \r\nYou *could* store all that information like this:\r\n\r\n```typescript\r\n    let pet_name: string = \"Bobby\";\r\n    let pet_age: number = 3;\r\n    let pet_weight: number = 5;\r\n```\r\n\r\nBut if you then needed to store information about all of your friends pet's, you would have to do some crazy hacky solution:\r\n\r\n```typescript\r\n\r\n    let dougs_pet_name: string: \"Gabby, Ironclawed Hamster\";\r\n    let dougs_pet_age: number: 2;\r\n    let dougs_pet_weight: number: 0.5;\r\n\r\n    let jessies_pet_name: string: \"Floridian Death Chameleon\";\r\n    let jessies_pet_age: number: 7;\r\n    let jessies_pet_weight: number: 2;\r\n\r\n    // ...\r\n\r\n```\r\n\r\nA better way to do this is to use an **object**!\r\n"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "<div align=\"center\" style=\"height: 7.5rem; display: grid; place-items: center;\">\r\n    <hr style=\"width: 30vw;\"></hr>\r\n</div>"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.error",
+                            "value": {
+                                "name": "Error",
+                                "message": "Failed to generate code object, \nundefined\n                  ^\n\nUnterminated regular expression",
+                                "stack": ""
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "\r\n# Objects : A collection of \"key's\" and \"values\"\r\nImagine a dictionary, where you can store a lot of words and their definitions.\r\n\r\nNow imagine that instead of storing definitions, you could store lots of different information.  \r\nThat's what an object is; A collection of words (keys) and their bits of information (values).  \r\nThe information objects stored can be in any format, but it's best practice to include information on what data types it stores.\r\n\r\nObjects are written out in JSON (JavaScript Object Notation) format, like this:\r\n\r\n```typescript\r\nlet pet = {\r\n    pet_name: \"Bobby\",\r\n    pet_age: 3,\r\n    pet_weight: 5\r\n};\r\n```\r\n\r\nIn some places, for example when your keys have spaces, you'll need to surround the \"keys\" with quotes, like this:\r\n```typescript\r\npet = {\r\n    \"pet_name\": \"Bobby\",\r\n    \"pet_age\": 3,\r\n    \"pet_weight\": 5\r\n};\r\n"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "<div align=\"center\" style=\"height: 7.5rem; display: grid; place-items: center;\">\r\n    <hr style=\"width: 30vw;\"></hr>\r\n</div>"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# Accessing Objects\r\nTo access values of an object, you can use either dot or bracket notation.\r\n\r\nConsider the pet example above.  \r\nTo access the `pet_name` field, we can use either:\r\n\r\n```typescript\r\npet.pet_name;   // Dot notation\r\npet['pet_name'] // Bracket notation\r\n```\r\n\r\nThe difference between the two is that bracket notation can access keys that like before, needed to be surrounded by quotes, for example ones with spaces.  \r\nBracket notation can also be used to access values based on variables like this:\r\n\r\n```typescript\r\nlet key = 'pet_name';\r\npet[key]; // Returns \"Bobby\"\r\n```\r\n\r\nThe reason that dot notation is preferred, and is more common, is that it's easier to read and write.  \r\n"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "<div align=\"center\" style=\"height: 7.5rem; display: grid; place-items: center;\">\r\n    <hr style=\"width: 30vw;\"></hr>\r\n</div>"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# Setting Fields In Objects\r\nYou can get values, and set them too!\r\n\r\nUsing the same notation as before, you can access the data, which is a variable, from within an object.  \r\nAfter accecssing it, you can set it to be something else!\r\n\r\nHere we update Bobby's name to something a bit more flavourful:\r\n```typescript\r\npet.pet_name = 'Coco, shadowdweller (don\\'t look behind you!)';\r\n// or\r\npet['pet_name'] = 'Coco, shadowdweller (don\\'t look behind you!)';\r\n```"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "<div align=\"center\" style=\"height: 7.5rem; display: grid; place-items: center;\">\r\n    <hr style=\"width: 30vw;\"></hr>\r\n</div>"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "Playground\r\nWe're now going to use a 'Playground' in order to test what we've learned.  \r\nGo ahead and play with the following code to see if you understand how to apply your knowledge of objects!\r\n\r\n**Good Luck!**"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "'use strict';\r\n\r\nconst brain = {\r\n    current_thought: 'TypeScript......',\r\n    favourite_food: 'Pizza.......',\r\n    is_falling_asleep: true\r\n}\r\n\r\nbrain['current_thought'] = 'TypeScript is awesome!';\r\nlet value = brain['current_thought'];\r\n\r\n// Don't worry about this, we'll cover it later.\r\n// It's here so you can see the output of the Playground.\r\nconsole.log(`Output:\\n\\t${value}`);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Output:",
+                                "\tTypeScript is awesome!",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# Something Goofed Up?\r\n\r\n\r\nIf another issue has come up, make sure you haven't modified the default code.  \r\nIf everything looks good, try restarting Visual Studio Code or running the Update.bat file."
+            ],
+            "outputs": []
+        }
+    ]
+}
